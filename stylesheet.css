@@ -1,0 +1,40 @@
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+td {
+    text-align: center;
+    height: 89px;
+    min-width: 420px;
+}
+.button_div {
+    display: flex;
+    flex-direction: column;
+}
+.active {
+    background-color: lightgreen;
+}
+.unactive {
+    background-color: red;
+}
+.lab {
+    background-color: #66a0ff;
+}
+.lecture {
+    background-color: #ffc063;
+}
+.project {
+    background-color: #ff776d;
+}
+.exercise {
+    background-color: #6be06f;
+}
+.hour {
+    /*background-color: green;*/
+    min-width: 50px;
+}
+.blue_div {
+    display: flex;
+}

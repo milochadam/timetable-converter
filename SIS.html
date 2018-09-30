@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I-%2D0/7B -->
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIS</title>
+    <meta name="author" content="Marcin Gadziejewski">
+    <meta name="theme-color" content="#000000">
+    <meta name="msapplication-navbutton-color" content="#000000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+    <link href="./SIS_files/jquery-ui.css" rel="stylesheet">
+<link href="./SIS_files/bootstrap.css" rel="stylesheet">
+<link href="./SIS_files/core.css" rel="stylesheet">
+<link href="./SIS_files/site.css" rel="stylesheet">
+<link href="./SIS_files/MyElements.css" rel="stylesheet">
+
+    <script src="./SIS_files/modernizr-2.6.2.js"></script>
+
+    <script src="./SIS_files/jquery-1.12.4.js"></script>
+<script src="./SIS_files/jquery-ui-1.12.1.js"></script>
+
+    <link href="./SIS_files/fontawesome-all.css" rel="stylesheet">
+
+    
+    <link rel="shortcut icon" type="image/x-icon" href="http://sis.eti.pg.gda.pl/favicon.ico">
+<style></style></head>
+<body>
+    <script>
+        $(document).ready(function () {
+            $('.container.body-content').fadeIn();
+        });
+    </script>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="img_logos">
+                <img src="./SIS_files/reverse.png" style="height:80px; margin-top:15px; cursor:pointer; " class="left" onclick="window.location = &#39;http://eti.pg.edu.pl&#39;">
+                <img src="./SIS_files/logo-eti.png" style="height:80px; margin-top:15px; cursor:pointer; box-shadow:0px 0px 10px 1px white; " class="navbar-right" onclick="window.location = &#39;http://eti.pg.edu.pl&#39;">
+                <hr style="margin:5px 0 5px 0; padding:0; border-top:1px solid #808080">
+            </div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                
+                <b><a class="navbar-brand" href="http://sis.eti.pg.gda.pl/">GŁOWNA<span class="under">MAIN</span></a></b>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SESJA <span class="caret"></span><span class="under">EXAMS</span></a>
+                        <ul class="dropdown-menu">
+
+                            <li><a href="http://sis.eti.pg.gda.pl/Examination/PrimaryExaminationRooms/AUD.KOW./1">Sale w sesji podstawowej<span class="under_dropdown"> / Primary exams for classroms</span></a></li>
+                            <li><a href="http://sis.eti.pg.gda.pl/Examination/SelectExGroup">Egzaminy dla grup<span class="under_dropdown"> / Primary exams for subject classes</span></a></li>
+                            <li><a href="http://sis.eti.pg.gda.pl/Examination/Search">Szukaj danych<span class="under_dropdown"> / Search</span></a></li>
+
+                            <li class="divider"></li>
+                            <li><a href="http://sis.eti.pg.gda.pl/Examination/SecondaryExaminationRooms/AUD.KOW./1">Sale w sesji poprawkowej<span class="under_dropdown"> / Primary exams for classroms</span></a></li>
+                            <li><a href="http://sis.eti.pg.gda.pl/Examination/SelectExGroupSecondary">Egzaminy dla grup w sesji poprawkowej<span class="under_dropdown"> / Secondary exams for subject classes</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SALA <span class="caret"></span><span class="under">CLASSROOM</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/AUD.KOW.">Sala<span class="under_dropdown"> / Classroom</span></a></li>
+                            <li><a href="http://sis.eti.pg.gda.pl/Advanced">Grafik zbiorczy<span class="under_dropdown"> / Aggregate list</span></a></li>
+                            <li class="divider"></li>
+                            <li><a href="http://sis.eti.pg.gda.pl/Teacher/ScheduleForTeacher/Jerzy/Konorski">Przykładowy grafik prowadzącego - J. Konorski</a></li>
+                            <li><a href="http://sis.eti.pg.gda.pl/Planner/SearchFreeRoom">Szukaj sal<span class="under_dropdown"> / Search classrooms</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">STUDENT <span class="caret"></span><span class="under">STUDENT</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://sis.eti.pg.gda.pl/Group/SelectGroup">Plany stacjonarne<span class="under_dropdown"> / Full-time studies</span></a></li>
+                            <li><a href="http://sis.eti.pg.gda.pl/Advanced/ScheduleForSemester/1">Stac. grafiki zbiorcze<span class="under_dropdown"> / All groups full-time studies</span></a></li>
+                            <li class="divider"></li>
+                            <li><a href="http://sis.eti.pg.gda.pl/Week/SelectGroup">Niestacjonarne<span class="under_dropdown"> / Part-time studies</span></a></li>
+                            <li><a href="http://sis.eti.pg.gda.pl/Week/WeekSchedule">Niestacjonarne - sale w tyg.<span class="under_dropdown"> / Part-time studies - rooms by dates</span></a></li>
+                            <li class="divider"></li>
+                            <li><a href="http://sis.eti.pg.gda.pl/Students">Informacje<span class="under_dropdown"></span></a></li>
+                            
+                            <li><a href="http://sis.eti.pg.gda.pl/Students/Streams">Strumienie<span class="under_dropdown"></span></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">WYSZUKIWANIE <span class="caret"></span><span class="under">SEARCH</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://sis.eti.pg.gda.pl/Search/Search">Szukaj danych <span class="under_dropdown"> / Data search</span></a></li>
+                            <li><a href="http://sis.eti.pg.gda.pl/Planner/SearchFreeRoom">Szukaj sal <span class="under_dropdown"> / Classrooms search</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">REZERWACJE <span class="caret"></span><span class="under">RESERVATIONS</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://sis.eti.pg.gda.pl/Planner/SearchFreeRoom">Szukaj sal <span class="under_dropdown"> / Search classrooms</span></a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">KATEDRY <span class="caret"></span><span class="under">DEPARTMENTS</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://sis.eti.pg.gda.pl/Department/RoomsIndex">Sale w katedrach <span class="under_dropdown"> / Classrooms in departments</span></a></li>
+                            <li><a href="http://sis.eti.pg.gda.pl/Department/TeachersIndex">Nauczyciele w katedrach <span class="under_dropdown"> / Teachers in departments</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="http://sis.eti.pg.gda.pl/Week/Postgraduate">PODYPLOMOWE<span class="under">POSTGRADUATE</span></a></li>
+                </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="https://logowanie.pg.gda.pl/logout">1087899<span class="under">LOGOUT</span> </a>
+                </li>
+            </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="container body-content" style="display: block;">
+        
+<div class="white_radius_div_center">
+                <a href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B"><span class="glyphicon glyphicon-random"></span>&nbsp;/Planner/ScheduleForGroup/E1605I--0/7B&nbsp;</a>
+                <a href="http://sis.eti.pg.gda.pl/Error/NotFound"><span class="glyphicon glyphicon-random"></span>&nbsp;/Error/NotFound&nbsp;</a>
+                <a href="http://sis.eti.pg.gda.pl/Error/NotFound"><span class="glyphicon glyphicon-random"></span>&nbsp;/Error/NotFound&nbsp;</a>
+                <a href="http://sis.eti.pg.gda.pl/Group/SelectGroup"><span class="glyphicon glyphicon-random"></span>&nbsp;Wybieranie planu grupy&nbsp;</a>
+                <a href="http://sis.eti.pg.gda.pl/Error/NotFound"><span class="glyphicon glyphicon-random"></span>&nbsp;/Error/NotFound&nbsp;</a>
+
+</div>
+        <br>
+        
+        
+<script>
+    function printGrid() {
+        var gridData = document.getElementById('tb');
+        var drukowanaSala = document.getElementById('groupName');
+        var windowUrl = 'Wydruk grafiku';
+
+        //set print document name for gridview
+        var uniqueName = new Date();
+        //var windowName = 'Wydruk_' + uniqueName.getTime();
+        var windowName = "Wydruk";
+
+        var prtWindow = window.open(windowUrl, windowName, 'left=100,top=100,right=100,bottom=100,width=700,height=500');
+        prtWindow.document.write('<!DOCTYPE HTML><html style="background:white;"><head>');
+        //prtWindow.document.write('<link rel="stylesheet" href="http://'+document.domain+(location.port ? ':'+location.port: '')+'/Content/site.css" type="text/css" />');
+        prtWindow.document.write('</head>');
+        prtWindow.document.write('<body style="background:white; !important">');
+        // ustawienie styli do drukowania
+        prtWindow.document.write('<style> #tb td, #tb th {white-space: nowrap; width: 1%; } table {border-collapse: collapse;} td {border: 1px solid #dadada; !important} .tb td, #tb, PlanGrupyView th{border-collapse: collapse; border: 1px solid silver; font-family: Arial; font-size: 5.5pt; text-align: center; padding: 0px 2px 0px 0px;} a {color: #333; outline: none; padding-left: 2px; padding-right: 2px; text-decoration: none; }</style>');
+        prtWindow.document.write('<div style="text-align:center; margin:0; padding:0;"><h6 style="background-color:white; font-family:Arial; color:#1a65a7; font-size: 0.8em; padding:0; margin-bottom:3px;">' + drukowanaSala.textContent + '</h6></div>');
+        //prtWindow.document.write('<div class="rounded_corners" style="width: 1065px">');
+        prtWindow.document.write(gridData.outerHTML);
+        //prtWindow.document.write('</div>');
+        prtWindow.document.write('</body></html>');
+        prtWindow.document.close();
+        prtWindow.focus();
+        prtWindow.print();
+        prtWindow.close();
+    }
+</script>
+
+<style>
+    table {
+        table-layout: fixed;
+    }
+
+    td:first-child {
+        width: 30%;
+    }
+
+    td:last-child {
+        width: 70%;
+    }
+
+    .indiv {
+        /*box-shadow: 0px 2px 10px;*/
+        padding: 0 2px 0 2px;
+        /*overflow: auto;*/
+        vertical-align: middle !important;
+    }
+
+    td {
+        padding: 0 !important;
+        word-wrap: break-word;
+    }
+</style>
+
+<div class="blue_div">
+    <div class="center-div">
+        <a style="margin:0 0 0 5px;" onclick="printGrid()" class="btn btn-xs btn-primary pull-right"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Wydruk</a>
+        <h3 id="groupName" style="text-align:center">Informatyka / gr. 7B</h3>
+    </div>
+    <table class="table table-bordered table-striped" id="tb">
+        <tbody><tr>
+            <th style="width:50px; background-color: #428bca; color: white;">
+                
+            </th>
+            <th style="background-color: #428bca; color: white;">
+                Poniedziałek / Monday
+            </th>
+            <th style="background-color: #428bca; color: white;">
+                Wtorek / Tuesday
+            </th>
+            <th style="background-color: #428bca; color: white;">
+                Środa / Wednesday
+            </th>
+            <th style="background-color: #428bca; color: white;">
+                Czwartek / Thursday
+            </th>
+            <th style="background-color: #428bca; color: white;">
+                Piątek / Friday
+            </th>
+        </tr>
+
+            <tr>
+                <td>
+                    07:00
+                </td>
+
+                    <td></td>
+
+                    <td></td>
+
+
+                    <td></td>
+
+                    <td></td>
+
+                    <td></td>
+            </tr>
+            <tr>
+                <td>
+                    08:00
+                </td>
+
+<td class="indiv" style="background-color:#F8E6CE"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/EA204">EA 204</a></b><br><b>[L]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">SIECI KOMPUTEROWE-(INF)-LABORATORIUM</a><br>dr inż. Wojciech Gumiński<br><b>co 2 tygodnie</b><br><b>EA 527</b><br><b>[P]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">ADMINISTROWANIE SYSTEMAMI KOMPUTEROWYMI</a><br>dr inż. Piotr Rajchowski<br><b>co 2 tygodnie; termin wspólony</b></td>
+<td class="indiv" style="background-color:#FFE9FA"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/EA527">EA 527</a></b><br><b>[L]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">ADMINISTROWANIE SYSTEMAMI KOMPUTEROWYMI</a><br>dr inż. Piotr Rajchowski<br><b>co 2 tygodnie</b><br><b>EA 503</b><br><b>[P]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">OPROGRAMOWANIE SYSTEMOWE</a><br>dr inż. Tomasz Dziubich<br><b>co 2 tygodnie; termin wspólony</b></td>
+
+                        <td><b>EA 507</b><br><b>[P]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">STRUKTURY BAZ DANYCH</a><br>dr inż. Grzegorz Gołaszewski<br><b>termin wspólny</b></td>
+
+                    <td></td>
+
+                    <td></td>
+            </tr>
+            <tr>
+                <td>
+                    09:00
+                </td>
+
+<td class="indiv" style="background-color:#F8E6CE"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/EA204">EA 204</a></b><br><b>[L]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">SIECI KOMPUTEROWE-(INF)-LABORATORIUM</a><br>dr inż. Wojciech Gumiński<br><b>co 2 tygodnie</b><br><b>EA 527</b><br><b>[P]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">ADMINISTROWANIE SYSTEMAMI KOMPUTEROWYMI</a><br>dr inż. Piotr Rajchowski<br><b>co 2 tygodnie; termin wspólony</b></td>
+<td class="indiv" style="background-color:#FFE9FA"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/EA527">EA 527</a></b><br><b>[L]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">ADMINISTROWANIE SYSTEMAMI KOMPUTEROWYMI</a><br>dr inż. Piotr Rajchowski<br><b>co 2 tygodnie</b><br><b>EA 503</b><br><b>[P]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">OPROGRAMOWANIE SYSTEMOWE</a><br>dr inż. Tomasz Dziubich<br><b>co 2 tygodnie; termin wspólony</b></td>
+
+                        <td><b>NE AUD.2</b><br><b>[W]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">SYSTEMY AGENTOWE</a><br>dr inż. Mariusz Matuszek</td>
+
+                    <td></td>
+
+<td class="indiv" style="background-color:#FFE9E9"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/EA527">EA 527</a></b><br><b>[P]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">ADMINISTROWANIE SYSTEMAMI KOMPUTEROWYMI</a><br>dr inż. Tomasz Boiński<br><b>co 2 tygodnie</b></td>            </tr>
+            <tr>
+                <td>
+                    10:00
+                </td>
+
+<td class="indiv" style="background-color:#EDEDED"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/EAAUD.2">EA AUD.2</a></b><br><b>[W]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">ADMINISTROWANIE SYSTEMAMI KOMPUTEROWYMI</a><br>dr inż. Tomasz Boiński</td>
+<td class="indiv" style="background-color:#D4EFFF"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/AUD.KOW.">AUD.KOW.</a></b><br><b>[W]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">OPROGRAMOWANIE SYSTEMOWE</a><br>dr inż. Tomasz Dziubich</td>
+
+                        <td><b>NE AUD.2</b><br><b>[W]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">KOMPUTEROWE SYSTEMY STEROWANIA</a><br>prof. Zdzisław Kowalczuk</td>
+
+                        <td><b>NE 160</b><br><b>[P]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">STRUKTURY BAZ DANYCH</a><br>dr inż. Grzegorz Gołaszewski</td>
+
+<td class="indiv" style="background-color:#FFE9E9"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/EA527">EA 527</a></b><br><b>[P]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">ADMINISTROWANIE SYSTEMAMI KOMPUTEROWYMI</a><br>dr inż. Tomasz Boiński<br><b>co 2 tygodnie</b></td>            </tr>
+            <tr>
+                <td>
+                    11:00
+                </td>
+
+<td class="indiv" style="background-color:#EDEDED"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/EAAUD.2">EA AUD.2</a></b><br><b>[W]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">ADMINISTROWANIE SYSTEMAMI KOMPUTEROWYMI</a><br>dr inż. Tomasz Boiński</td>
+<td class="indiv" style="background-color:#D4EFFF"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/AUD.KOW.">AUD.KOW.</a></b><br><b>[W]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">OPROGRAMOWANIE SYSTEMOWE</a><br>dr inż. Tomasz Dziubich</td>
+
+<td class="indiv" style="background-color:#F8E6CE"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/SPNJOI2">SPNJO I2</a></b><br><b>[C]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">JĘZYK ANGIELSKI IV</a><br>mgr Agnieszka Jachowicz</td>
+                        <td><b>EA 527</b><br><b>[L]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">SYSTEMY AGENTOWE</a><br>dr inż. Mariusz Matuszek</td>
+
+<td class="indiv" style="background-color:#FCFF9C"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/NEAUD.2">NE AUD.2</a></b><br><b>[W]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">KONSTRUKCJA KOMPILATORÓW</a><br>dr hab. Jan Daciuk<br><b>do poł.semestru; 07.12.2018 - J.Daciuk</b></td>            </tr>
+            <tr>
+                <td>
+                    12:00
+                </td>
+
+<td class="indiv" style="background-color:#FFE9E9"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/EA436">EA 436</a></b><br><b>[L]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">INŻYNIERIA OPROGRAMOWANIA</a><br>dr inż. Anna Bobkowska</td>
+<td class="indiv" style="background-color:#D4EFFF"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/EA541">EA 541</a></b><br><b>[L]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">KOMPUTEROWE SYSTEMY STEROWANIA</a><br>mgr inż. Marek Grzegorek<br><b>ostatnie 10 tygodni</b></td>
+
+<td class="indiv" style="background-color:#F8E6CE"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/SPNJOI2">SPNJO I2</a></b><br><b>[C]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">JĘZYK ANGIELSKI IV</a><br>mgr Agnieszka Jachowicz</td>
+<td class="indiv" style="background-color:#FFE9FA"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/NE160">NE 160</a></b><br><b>[P]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">KONSTRUKCJA KOMPILATORÓW</a><br>dr hab. Jan Daciuk<br><b>co 2 tygodnie</b></td>
+<td class="indiv" style="background-color:#FCFF9C"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/NEAUD.2">NE AUD.2</a></b><br><b>[W]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">KONSTRUKCJA KOMPILATORÓW</a><br>dr hab. Jan Daciuk<br><b>do poł.semestru; 07.12.2018 - J.Daciuk</b></td>            </tr>
+            <tr>
+                <td>
+                    13:00
+                </td>
+
+<td class="indiv" style="background-color:#FFE9E9"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/EA436">EA 436</a></b><br><b>[L]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">INŻYNIERIA OPROGRAMOWANIA</a><br>dr inż. Anna Bobkowska</td>
+<td class="indiv" style="background-color:#D4EFFF"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/EA541">EA 541</a></b><br><b>[L]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">KOMPUTEROWE SYSTEMY STEROWANIA</a><br>mgr inż. Marek Grzegorek<br><b>ostatnie 10 tygodni</b></td>
+
+<td class="indiv" style="background-color:#D4EFFF"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/NE160">NE 160</a></b><br><b>[P]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">KONSTRUKCJA KOMPILATORÓW</a><br>dr hab. Jan Daciuk<br><b>co 2 tygodnie; termin wspólony</b><br><b>NE 230</b><br><b>[P]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">SPOŁECZNE ASPEKTY INFORMATYKI</a><br>dr inż. Jakub Miler<br><b>co  3 tygodnie</b></td>
+<td class="indiv" style="background-color:#FFE9FA"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/NE160">NE 160</a></b><br><b>[P]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">KONSTRUKCJA KOMPILATORÓW</a><br>dr hab. Jan Daciuk<br><b>co 2 tygodnie</b></td>
+<td class="indiv" style="background-color:#FFE9FA"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/NEAUD1L">NE AUD1L</a></b><br><b>[W]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">SPOŁECZNE ASPEKTY INFORMATYKI</a><br>dr inż. Anna Bobkowska<br><b>do 30.11.2018</b></td>            </tr>
+            <tr>
+                <td>
+                    14:00
+                </td>
+
+                    <td></td>
+
+<td class="indiv" style="background-color:#D4EFFF"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/EA541">EA 541</a></b><br><b>[L]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">KOMPUTEROWE SYSTEMY STEROWANIA</a><br>mgr inż. Marek Grzegorek<br><b>ostatnie 10 tygodni</b></td>
+
+<td class="indiv" style="background-color:#D4EFFF"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/NE160">NE 160</a></b><br><b>[P]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">KONSTRUKCJA KOMPILATORÓW</a><br>dr hab. Jan Daciuk<br><b>co 2 tygodnie; termin wspólony</b><br><b>NE 230</b><br><b>[P]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">SPOŁECZNE ASPEKTY INFORMATYKI</a><br>dr inż. Jakub Miler<br><b>co  3 tygodnie</b></td>
+<td class="indiv" style="background-color:#F8E6CE"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/NEAUD1P">NE AUD1P</a></b><br><b>[W]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">INŻYNIERIA OPROGRAMOWANIA</a><br>dr inż. Aleksander Jarzębowicz</td>
+<td class="indiv" style="background-color:#FFE9FA"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/NEAUD1L">NE AUD1L</a></b><br><b>[W]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">SPOŁECZNE ASPEKTY INFORMATYKI</a><br>dr inż. Anna Bobkowska<br><b>do 30.11.2018</b></td>            </tr>
+            <tr>
+                <td>
+                    15:00
+                </td>
+
+<td class="indiv" style="background-color:#FCFF9C"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/EA541">EA 541</a></b><br><b>[L]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">KOMPUTEROWE SYSTEMY STEROWANIA</a><br>mgr inż. Karol Szymański<br><b>ostatnie 10 tygodni</b></td>
+                        <td><b>EA 504</b><br><b>[P]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">OPROGRAMOWANIE SYSTEMOWE</a><br>dr inż. Tomasz Dziubich<br><b>co 2 tygodnie</b></td>
+
+
+<td class="indiv" style="background-color:#EDEDED"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/NE230">NE 230</a></b><br><b>[P]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">SPOŁECZNE ASPEKTY INFORMATYKI</a><br>dr inż. Jakub Miler<br><b>co  3 tygodnie</b></td>
+<td class="indiv" style="background-color:#F8E6CE"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/NEAUD1P">NE AUD1P</a></b><br><b>[W]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">INŻYNIERIA OPROGRAMOWANIA</a><br>dr inż. Aleksander Jarzębowicz</td>
+<td class="indiv" style="background-color:#F8E6CE"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/EA508">EA 508</a></b><br><b>[L]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">INŻYNIERIA OPROGRAMOWANIA</a><br>dr inż. Aleksander Jarzębowicz<br><b>NE 204</b><br><b>[P]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">SPOŁECZNE ASPEKTY INFORMATYKI</a><br>dr inż. Anna Bobkowska<br><b>co  3 tygodnie; termin wspólny gr. 8</b><br><b>NE 204</b><br><b>[P]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">SPOŁECZNE ASPEKTY INFORMATYKI</a><br>dr inż. Anna Bobkowska<br><b>co  3 tygodnie; termin wspólny gr. 9</b></td>            </tr>
+            <tr>
+                <td>
+                    16:00
+                </td>
+
+<td class="indiv" style="background-color:#FCFF9C"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/EA541">EA 541</a></b><br><b>[L]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">KOMPUTEROWE SYSTEMY STEROWANIA</a><br>mgr inż. Karol Szymański<br><b>ostatnie 10 tygodni</b></td>
+                    <td></td>
+
+
+                    <td></td>
+
+<td class="indiv" style="background-color:#D4EFFF"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/NEAUD.2">NE AUD.2</a></b><br><b>[W]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">STRUKTURY BAZ DANYCH</a><br>prof. Krzysztof Goczyła<br><b>do 29.11.2018</b></td>
+<td class="indiv" style="background-color:#F8E6CE"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/EA508">EA 508</a></b><br><b>[L]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">INŻYNIERIA OPROGRAMOWANIA</a><br>dr inż. Aleksander Jarzębowicz<br><b>NE 204</b><br><b>[P]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">SPOŁECZNE ASPEKTY INFORMATYKI</a><br>dr inż. Anna Bobkowska<br><b>co  3 tygodnie; termin wspólny gr. 8</b><br><b>NE 204</b><br><b>[P]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">SPOŁECZNE ASPEKTY INFORMATYKI</a><br>dr inż. Anna Bobkowska<br><b>co  3 tygodnie; termin wspólny gr. 9</b></td>            </tr>
+            <tr>
+                <td>
+                    17:00
+                </td>
+
+<td class="indiv" style="background-color:#FCFF9C"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/EA541">EA 541</a></b><br><b>[L]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">KOMPUTEROWE SYSTEMY STEROWANIA</a><br>mgr inż. Karol Szymański<br><b>ostatnie 10 tygodni</b></td>
+                    <td></td>
+
+
+                    <td></td>
+
+<td class="indiv" style="background-color:#D4EFFF"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/NEAUD.2">NE AUD.2</a></b><br><b>[W]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">STRUKTURY BAZ DANYCH</a><br>prof. Krzysztof Goczyła<br><b>do 29.11.2018</b></td>
+<td class="indiv" style="background-color:#D4EFFF"><b><a class="room_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForRoom/NE204">NE 204</a></b><br><b>[P]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">SPOŁECZNE ASPEKTY INFORMATYKI</a><br>dr inż. Anna Bobkowska<br><b>co  3 tygodnie; termin wspólny gr. 8</b><br><b>NE 204</b><br><b>[P]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">SPOŁECZNE ASPEKTY INFORMATYKI</a><br>dr inż. Anna Bobkowska<br><b>co  3 tygodnie; termin wspólny gr. 9</b></td>            </tr>
+            <tr>
+                <td>
+                    18:00
+                </td>
+
+                    <td></td>
+
+                    <td></td>
+
+
+                    <td></td>
+
+                        <td><b>EA 527</b><br><b>[L]</b> <a class="subject_name" href="http://sis.eti.pg.gda.pl/Planner/ScheduleForGroup/E1605I--0/7B#">SYSTEMY AGENTOWE</a><br>dr inż. Mariusz Matuszek</td>
+
+                    <td></td>
+            </tr>
+            <tr>
+                <td>
+                    19:00
+                </td>
+
+                    <td></td>
+
+                    <td></td>
+
+
+                    <td></td>
+
+                    <td></td>
+
+                    <td></td>
+            </tr>
+            <tr>
+                <td>
+                    20:00
+                </td>
+
+                    <td></td>
+
+                    <td></td>
+
+
+                    <td></td>
+
+                    <td></td>
+
+                    <td></td>
+            </tr>
+            <tr>
+                <td>
+                    21:00
+                </td>
+
+                    <td></td>
+
+                    <td></td>
+
+
+                    <td></td>
+
+                    <td></td>
+
+                    <td></td>
+            </tr>
+
+    </tbody></table>
+
+</div>
+
+
+
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <br>
+                    <h4><span class="label label-default" style="background-color:white; padding: 0.26em .6em .3em; color:black;"> Marcin Gadziejewski </span></h4>
+                    <h4 font-weight:bold;"="">
+                        marcin.gadziejewski@eti.pg.edu.pl<br>
+                        58 347 28 18
+                    </h4>
+                </div>
+            </div>
+            <br>
+        </div>
+    </footer>
+    <script src="./SIS_files/bootstrap.js"></script>
+<script src="./SIS_files/respond.js"></script>
+
+    
+
+
+
+</body></html>
