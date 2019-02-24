@@ -3,11 +3,15 @@ a {
     font-weight: bold;
     color: black;
 }
-
 td {
     text-align: center;
-    height: 89px;
-    min-width: 420px;
+    height: 70px;
+    width: 50px;
+    font-size: 13px;
+    font-family: Lato;
+}
+.lesson {
+    min-width: 280px;
 }
 .button_div {
     display: flex;
@@ -19,7 +23,7 @@ td {
 .unactive {
     background-color: red;
 }
-.lab {
+.labs {
     background-color: #66a0ff;
 }
 .lecture {
@@ -33,8 +37,18 @@ td {
 }
 .hour {
     /*background-color: green;*/
-    min-width: 50px;
+    /*min-width: 50px!important;*/
 }
-.blue_div {
-    display: flex;
+.lesson-name {
+    font-weight: 800;
+}
+.lesson-room {
+    font-weight: 800;
+}
+.lesson-info {
+    font-weight: 800;
+}
+.weekday {
+    font-weight: 800;
+    size: 16px;
 }
