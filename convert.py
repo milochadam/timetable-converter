@@ -5,10 +5,12 @@ import copy
 from bs4 import BeautifulSoup, NavigableString
 from typing import List, Optional
 
-# source = "SIS.html"
-source = "KAIMS.html"
+sources = [
+    "KAIMS.html",
+    "KAIMS2.html",
+]
 
-output = "out.html"
+# output = "out.html"
 
 DAY_NAMES_PRESENT = True
 DAYS = 5
@@ -24,9 +26,12 @@ MERGE_CONSECUTIVE_COURSES = True
 
 
 def main():
-    soup = get_soup_from_file(source)
-    parser = HTMLParser(soup)
-    parser.main()
+    for source in sources:
+        soup = get_soup_from_file(source)
+        parser = HTMLParser(soup)
+        new_soup = parser.main()
+        output = '_out.'.join(source.split('.'))
+        save_html_file(new_soup, output)
 
 
 def get_soup_from_file(filename: str) -> BeautifulSoup:
@@ -47,6 +52,7 @@ class Course:
         self.type = None
         self.name = None
         self.teacher = None
+        self.other = None
 
         self.hours = 1
         self.checked = False
@@ -59,7 +65,8 @@ class Course:
         return self.room == other.room and \
                self.type == other.type and \
                self.name == other.name and \
-               self.teacher == other.teacher
+               self.teacher == other.teacher and \
+               self.other == other.other
 
     def to_html(self):
         s = BeautifulSoup('', 'html.parser')
@@ -92,6 +99,10 @@ class Course:
         # container.insert(1, type_tag)
         container.insert(2, name_type_container)
         container.insert(3, teacher_tag)
+        if self.other:
+            other_tag = s.new_tag('div', attrs={'class': 'other'})
+            other_tag.string = self.other
+            container.insert(4, other_tag)
         return container
 
 
@@ -100,13 +111,8 @@ class HTMLParser:
     def __init__(self, soup) -> None:
         self.soup = soup
 
-    def main(self) -> None:
-        global DAY_NAMES_PRESENT
-        global HOURS
-        global DAYS
-        global MERGE_CONSECUTIVE_COURSES
-        new_plan = [[
-            [] for y in range(HOURS)]
+    def main(self) -> BeautifulSoup:
+        new_plan = [[[] for y in range(HOURS)]
             for x in range(DAYS)]
         s = self.soup
         table_body = s.find(name='tbody')
@@ -140,6 +146,8 @@ class HTMLParser:
         new_soup = BeautifulSoup('<html></html>', 'html.parser')
         new_soup.insert(0, s.new_tag('body'))
         new_soup.insert(0, s.new_tag('head'))
+        new_soup.head.insert(0, s.new_tag('meta', attrs={'charset': 'utf-8'}))
+
         timetable_div = s.new_tag('div')
         timetable_div['class'] = timetable_div.get('class', []) + ['timetable-container']
         new_soup.body.insert(0, timetable_div)
@@ -194,7 +202,7 @@ class HTMLParser:
 
             new_soup.body.div.append(day_div)
         new_soup.head.insert(0, BeautifulSoup('<link rel="stylesheet" href="stylesheet.css" type="text/css">', 'html.parser'))
-        save_html_file(new_soup, 'output.html')
+        return new_soup
 
     @staticmethod
     def _string_to_courses(tags) -> List[Course]:

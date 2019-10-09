@@ -7,28 +7,30 @@
     flex-direction: column;
 }
 
-.day-name {
-    --dayNameHeight: 20px;
-    display: flex;
-    min-height: var(--dayNameHeight);
-    width: 300px;
-    text-align: center;
-    justify-content: center;
-}
-
 .cell {
     display: flex;
-    --cellHeight: 70px;
+    --cellHeight: 55px;
     min-height: var(--cellHeight);
-    width: 320px;
+    --cellWidth: 250px;
+    width: var(--cellWidth);
     text-align: center;
     font-family: 'Helvetica';
     --borderWidth: 1px;
     border-top-width: var(--borderWidth);
     border-top-style: outset;
-    border-right-width: 1px;
+    border-right-width: 0px;
     border-right-style: outset;
 }
+
+.day-name {
+    --dayNameHeight: 20px;
+    display: flex;
+    min-height: var(--dayNameHeight);
+    width: var(--cellWidth);
+    text-align: center;
+    justify-content: center;
+}
+
 
 .empty-in-corner {
     /* Match with of .hour and height of .day-name */
@@ -50,14 +52,19 @@
     margin: var(--courseMargin);
 }
 
-span.type {
+.type {
     margin-right: 4px;
+    display: none;
 }
 
 .hour {
     width: 50px;
     justify-content: center;
     align-items: center;
+}
+
+.other {
+    font-size: 12px;
 }
 
 .lecture {
@@ -87,7 +94,7 @@ span.type {
 
 .name {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 13px;
 }
 
 .room {
