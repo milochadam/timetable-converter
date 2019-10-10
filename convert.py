@@ -2,15 +2,17 @@
 # -*- coding: utf-8 -*-
 
 import copy
+import re
+import argparse
+import sys
 from bs4 import BeautifulSoup, NavigableString
 from typing import List, Optional
 
-sources = [
-    "KAIMS.html",
-    "KAIMS2.html",
-]
 
-# output = "out.html"
+parser = argparse.ArgumentParser(description='Convert a timetable to a reasonable format.')
+parser.add_argument('-i', '--in', '--input', '--source', type=str, dest='source', default='SIS.html')
+parser.add_argument('-o', '--out', '--output', type=str, dest='output', default='SIS_out.html')
+args = parser.parse_args(sys.argv[1:])
 
 DAY_NAMES_PRESENT = True
 DAYS = 5
@@ -26,12 +28,11 @@ MERGE_CONSECUTIVE_COURSES = True
 
 
 def main():
-    for source in sources:
-        soup = get_soup_from_file(source)
-        parser = HTMLParser(soup)
-        new_soup = parser.main()
-        output = '_out.'.join(source.split('.'))
-        save_html_file(new_soup, output)
+    soup = get_soup_from_file(args.source)
+    parser = HTMLParser(soup)
+    new_soup = parser.main()
+    output = args.output
+    save_html_file(new_soup, output)
 
 
 def get_soup_from_file(filename: str) -> BeautifulSoup:
@@ -121,7 +122,10 @@ class HTMLParser:
         for y, row in enumerate(table_body.find_all(name='tr')[1:]):
             # skip first cell with hour
             for x, cell in enumerate(row.find_all(name='td')[1:]):
-                courses = self._string_to_courses(cell.children)
+                try:
+                    courses = self._string_to_courses(cell.children)
+                except Exception as e:
+                    print(e, cell)
                 new_plan[x][y].extend(courses)
                 # print(courses)
 
@@ -210,11 +214,11 @@ class HTMLParser:
         if tags is []:
             return [Course(empty=True)]
 
-        STATE_ROOM = 1
-        STATE_TYPE = 2
-        STATE_NAME = 3
-        STATE_TEACHER = 4
-        STATE_OTHER = 5
+        STATE_ROOM = 'STATE_ROOM'
+        STATE_TYPE = 'STATE_TYPE'
+        STATE_NAME = 'STATE_NAME'
+        STATE_TEACHER = 'STATE_TEACHER'
+        STATE_OTHER = 'STATE_OTHER'
 
         state = STATE_ROOM
 
@@ -227,40 +231,42 @@ class HTMLParser:
         }
         course = empty_course
         for tag in tags:
-            if tag.name == 'br':
-                continue
+            while True:
+                if tag.name == 'br':
+                    break
 
-            if isinstance(tag, NavigableString) and str(tag) == ' ':
-                continue
+                if isinstance(tag, NavigableString) and tag == ' ':
+                    break
 
-            if state == STATE_ROOM:
-                course.update({'room': tag.get_text()})
-                state = STATE_TYPE
-                continue
+                if state == STATE_ROOM:
+                    course.update({'room': tag.get_text()})
+                    state = STATE_TYPE
+                    break
 
-            if state == STATE_TYPE:
-                course.update({'type': tag.get_text()})
-                state = STATE_NAME
-                continue
+                if state == STATE_TYPE:
+                    course.update({'type': tag.get_text()})
+                    state = STATE_NAME
+                    break
 
-            if state == STATE_NAME:
-                course.update({'name': tag.get_text()})
-                state = STATE_TEACHER
-                continue
+                if state == STATE_NAME:
+                    course.update({'name': tag.get_text()})
+                    state = STATE_TEACHER
+                    break
 
-            if state == STATE_TEACHER:
-                course.update({'teacher': str(tag.string)})
-                state = STATE_OTHER
-                continue
+                if state == STATE_TEACHER:
+                    course.update({'teacher': str(tag.string)})
+                    state = STATE_OTHER
+                    break
 
-            if state == STATE_OTHER:
-                course.update({'other': tag.get_text()})
-                courses.append(course)
-                course = copy.deepcopy(empty_course)
-                state = STATE_ROOM
-                continue
-
-            break
+                if state == STATE_OTHER:
+                    if re.compile(r'(EA|NE|AUD).*').match(tag.get_text()):
+                        state = STATE_ROOM
+                        continue
+                    course.update({'other': tag.get_text()})
+                    courses.append(course)
+                    course = copy.deepcopy(empty_course)
+                    state = STATE_ROOM
+                    break
 
         if state == STATE_OTHER:
             courses.append(course)
