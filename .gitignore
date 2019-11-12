@@ -3,3 +3,4 @@
 .venv
 *.sw[po]
 .idea/
+__pycache__
