@@ -14,3 +14,17 @@ DAY4 = 'czw'
 DAY5 = 'pt'
 
 DAYS = [DAY1, DAY2, DAY3, DAY4, DAY5]
+DAYS_COUNT = 5
+
+DAY_NAMES_PRESENT = True
+HOURS = 15
+START_HOUR = 7
+
+WEEKDAY_NAMES = [
+    'Poniedziałek',
+    'Wtorek',
+    'Środa',
+    'Czwartek',
+    'Piątek',
+]
+MERGE_CONSECUTIVE_COURSES = True
