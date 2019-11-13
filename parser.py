@@ -44,7 +44,6 @@ class HTMLParser:
                         matching_course is None or course == matching_course
                     ):
                         matching_course = course
-                        print(i)
                         new_plan[mtx][mty + i].append(course)
                         del new_plan[mfx][mfy + i][j]
                         break
