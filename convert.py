@@ -2,15 +2,11 @@
 # -*- coding: utf-8 -*-
 
 import argparse
-import copy
-import json
-import re
 import sys
 from parser import HTMLParser
-from typing import List, Optional
+from typing import List
 
-from bs4 import BeautifulSoup, NavigableString
-from course import Course
+from bs4 import BeautifulSoup
 from settings import DAYS, ROOM_REGEX
 
 
