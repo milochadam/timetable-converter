@@ -64,7 +64,7 @@
 }
 
 .other {
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .lecture {
@@ -94,11 +94,18 @@
 
 .name {
     font-weight: bold;
-    font-size: 13px;
+    font-size: 10px;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.name-type-container {
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .room {
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .double {
@@ -109,6 +116,16 @@
     --tripleHeight: calc(var(--cellHeight)*3);
     --doubleBorderWidth: calc(var(--borderWidth)*2);
     min-height: calc(var(--tripleHeight));
+}
+.quadruple {
+    --quadrupleHeight: calc(var(--cellHeight)*4);
+    --doubleBorderWidth: calc(var(--borderWidth)*3);
+    min-height: calc(var(--quadrupleHeight));
+}
+.quintuple {
+    --quintupleHeight: calc(var(--cellHeight)*5);
+    --doubleBorderWidth: calc(var(--borderWidth)*4);
+    min-height: calc(var(--quintupleHeight));
 }
 .deleted {
     display: none;

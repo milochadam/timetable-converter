@@ -123,12 +123,18 @@ class HTMLParser:
                         ]
 
                     if MERGE_CONSECUTIVE_COURSES:
-                        if course.hours == 2:
-                            course_div['class'] = course_div.get('class', []
-                                                                ) + ['double']
-                        if course.hours == 3:
-                            course_div['class'] = course_div.get('class', []
-                                                                ) + ['triple']
+                        merge_count_dict = {
+                            1: ['single'],
+                            2: ['double'],
+                            3: ['triple'],
+                            4: ['quadruple'],
+                            5: ['quintuple'],
+                        }
+
+                        course_div['class'] = (
+                            course_div.get('class', [])
+                            + merge_count_dict[course.hours])
+
                         if course.delete:
                             course_div['class'] = course_div.get('class', []
                                                                 ) + ['deleted']
